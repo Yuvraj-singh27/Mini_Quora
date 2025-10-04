@@ -53,9 +53,12 @@ const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   database: 'quora',
-  password:"",
+  password:" ",
 });
 
+app.get("/",(req,res)=>{
+  res.redirect("/post");
+});
 app.get("/post",(req,res)=>{
    const q = `SELECT * FROM user`;
    try{
