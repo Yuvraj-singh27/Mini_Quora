@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Edit Profile</title>
+  <link rel="stylesheet" href="/edit.css">
+</head>
+<body>
+  <div class="container">
+    <% if (typeof error !== 'undefined') { %>
+      <script>alert("<%= error %>");</script>
+    <% } %>
+
+    <h1>Edit Profile</h1>
+    <div class="edit-form-container">
+      <div class="edit-username">
+        Editing Profile: <%= username %>
+      </div>
+      <form method="POST" action="/post/<%= id %>/edit?_method=PATCH">
+        
+        <!-- Username -->
+        <div class="field">
+          <label for="username">Username</label>
+          <input 
+            type="text" 
+            id="username" 
+            name="username" 
+            value="<%= username %>" 
+            placeholder="Enter username" 
+            required />
+        </div>
+
+        <!-- Email -->
+        <div class="field">
+          <label for="email">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            value="<%= email %>" 
+            placeholder="Enter email" 
+            required />
+        </div>
+
+        <!-- Password -->
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="password-wrapper">
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              value="<%= password %>" 
+              placeholder="Enter password" 
+              required />
+            <button type="button" class="toggle-btn" id="toggle">Show</button>
+          </div>
+        </div>
+
+        <!-- Post -->
+        <div class="field">
+          <label for="post">About / Post</label>
+          <textarea id="post" name="post" value="<%= post %>" placeholder="Write something..."><%= post %></textarea>
+        </div>
+
+        <!-- Buttons -->
+        <div class="form-buttons">
+          <button class="btn-update" type="submit">Update</button>
+          <a href="/post/<%= id %>" class="btn-cancel">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Toggle password visibility
+    const pw = document.getElementById('password');
+    const toggle = document.getElementById('toggle');
+    toggle.addEventListener('click', () => {
+      if (pw.type === 'password') {
+        pw.type = 'text';
+        toggle.textContent = 'Hide';
+      } else {
+        pw.type = 'password';
+        toggle.textContent = 'Show';
+      }
+    });
+  </script>
+</body>
+</html>

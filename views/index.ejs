@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Quora - Home</title>
+  <link rel="stylesheet" href="/home.css">
+</head>
+<body>
+  <h1>Mini Quora</h1>
+  <div class="container">
+    <!-- Create Post Section -->
+    <h2>Create a Post</h2>
+    <form method="GET" action="/post/new">
+      <!-- <input type="text" name="username" placeholder="Enter your username"> -->
+       <p style="color:#2c3e50; font-size:18px; margin-bottom:20px; font-style:italic;">✨ Your thoughts have the power to inspire, teach, and create change.  Don’t hold back—share your ideas with the world today! 🚀</p>
+      <!-- <textarea rows="3" name="post" placeholder="What's on your mind?"></textarea> -->
+      <br>
+      <button class="btn-primary" type="submit">Post</button>
+    </form>
+    
+
+    <!-- Example Post -->
+    <div class="post">
+      <% for(post of result){ %>
+        <p class="username">Posted by: <%= post.username %></p>
+        <p><%= post.post %></p>
+        <a href="post/<%= post.id %>" class="btn-detail">View Details</a>
+        <!-- <button class="btn-edit">Edit</button>
+        <button class="btn-delete">Delete</button> -->
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>

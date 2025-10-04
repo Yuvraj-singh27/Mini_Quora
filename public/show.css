@@ -1,0 +1,95 @@
+body {
+  font-family: Georgia, serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 20px;
+}
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0,0,0,0.15);
+}
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+.post-detail {
+  padding: 20px;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  background: #ecf6fc;
+}
+.username {
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+.content {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+.btn-back {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  background: #3498db;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.btn-back:hover {
+  background: #2980b9;
+}
+
+/* --- New Styles for Edit and Delete Buttons --- */
+
+/* Container for the new buttons */
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px; /* Adds space between the buttons */
+  justify-content: flex-end; /* Aligns buttons to the right */
+}
+
+/* Edit button style */
+.btn-edit {
+  text-decoration: none;
+  background: #27ae60;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-edit:hover {
+  background: #229954;
+}
+
+/* Delete button style */
+.btn-delete {
+  text-decoration: none;
+  background: #c0392b;
+  color: white;
+  padding: 8px 14px;
+  border: none; /* Removes default button border */
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer; /* Changes cursor to a pointer */
+  transition: background-color 0.3s;
+}
+
+.btn-delete:hover {
+  background: #a93226;
+}
+
+/* Styling the form element for the delete button */
+.delete-form {
+  display: inline;
+}

@@ -1,0 +1,97 @@
+body {
+      font-family: Georgia, serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 6px 12px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+    .edit-form-container {
+      padding: 20px;
+      border: 2px solid #3498db;
+      border-radius: 10px;
+      background: #ecf6fc;
+      text-align: left;
+    }
+    .field {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    input, textarea {
+      width: 95%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+      font-size: 16px;
+      resize: vertical;
+    }
+    textarea {
+      min-height: 100px;
+    }
+    .password-wrapper {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .password-wrapper input {
+      flex: 1;
+    }
+    .toggle-btn {
+      padding: 8px 14px;
+      border: none;
+      background: #3498db;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .toggle-btn:hover {
+      background: #2c80b4;
+    }
+    .form-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .btn-update, .btn-cancel {
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 6px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .btn-update {
+      background: #27ae60;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-update:hover {
+      background: #229954;
+    }
+    .btn-cancel {
+      background: #e74c3c;
+      color: white;
+    }
+    .btn-cancel:hover {
+      background: #c0392b;
+    }

@@ -1,0 +1,50 @@
+ body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #b92b27;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    }
+    textarea, input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      resize: none;
+    }
+    button {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+    .btn-primary { background: #b92b27; color: white; }
+    .btn-edit { background: #f5a623; color: white; }
+    .btn-delete { background: #d0021b; color: white; }
+    .btn-detail { background: #4a90e2; color: white; text-decoration: none; padding: 6px 12px; border-radius: 5px; }
+    .post {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+    .username {
+      font-weight: bold;
+      color: #b92b27;
+      margin-bottom: 5px;
+    }

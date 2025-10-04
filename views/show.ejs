@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post Details</title>
+  <link rel="stylesheet" href="/show.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Post Details</h1>
+    <div class="post-detail">
+      <p class="username">Posted by: <%= result[0].username %></p>
+      <p class="username">Id: <%= result[0].id %></p>
+      <p class="content"><%= result[0].post %></p>
+      
+      
+      <div class="action-buttons">
+        <a  href="/post/<%= result[0].id %>/edit" class="btn-edit">✏️ Edit</a>
+
+        <form action="/post/<%= result[0].id %>/delete" method="GET" class="delete-form">
+          <button type="submit" class="btn-delete">🗑️ Delete</button>
+        </form>
+      </div>
+
+    </div>
+    <a href="/post" class="btn-back">⬅ Back to Home</a>
+  </div>
+</body>
+</html>
