@@ -49,12 +49,19 @@ let posts = [
 
 
 //for connect database to the website SQL
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  database: 'quora',
-  password:" ",
+require('dotenv').config(); // ye .env file ko read karega
+
+const connection= mysql.createPool({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
 });
+
+const port = process.env.PORT || 8080;
 
 app.get("/",(req,res)=>{
   res.redirect("/post");
@@ -243,7 +250,7 @@ app.delete("/post/:id/delete",async(req,res)=>{
 //   }
 // );
 
-const port =8080;
+
 app.listen(port,()=>{
    console.log("hello server is rady of run");
 });
