@@ -51,6 +51,7 @@ let posts = [
 //for connect database to the website SQL
 require('dotenv').config(); // ye .env file ko read karega
 
+
 const connection= mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
@@ -60,8 +61,7 @@ const connection= mysql.createPool({
   connectionLimit: 10,
   queueLimit: 0
 });
-
-const port = process.env.PORT || 8080;
+const port =process.env.PORT ;
 
 app.get("/",(req,res)=>{
   res.redirect("/post");
